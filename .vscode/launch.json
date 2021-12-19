@@ -12,7 +12,7 @@
             "program": "${workspaceFolder}/bin/Debug/net5.0/AdventOfCode2021.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "stopAtEntry": false
         },
         {
