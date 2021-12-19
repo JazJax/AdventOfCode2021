@@ -3,10 +3,15 @@ using System.Threading.Tasks;
 
 namespace ChallengeRunner
 {
-    public interface IChallenge
+    public abstract class Challenge
     {
-        string ChallengeDescription {get;}
-        string Answer {get;}
+        public abstract string ChallengeDescription { get;}
+        public string Answer
+        {
+            get { return Run();}
+        }
+
+        protected abstract string Run();
     }
     public enum UserAction
     {

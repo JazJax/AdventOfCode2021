@@ -27,7 +27,7 @@ namespace AdventOfCode2021
                 Type challengeType = Type.GetType(qualifiedChallengeName) ?? null;
                 try
                 {
-                    var challenge = (IChallenge)Activator.CreateInstance(challengeType);                    
+                    var challenge = (Challenge)Activator.CreateInstance(challengeType);                    
                     Console.WriteLine($"Task description: {challenge.ChallengeDescription}");
                     Console.WriteLine($"Answer: {challenge.Answer}");
                 }

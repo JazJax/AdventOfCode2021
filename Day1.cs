@@ -1,3 +1,28 @@
+using System;
+using ChallengeRunner;
+
+namespace Day1
+{
+    public class Day1 : Challenge
+    {
+        public override string ChallengeDescription { get;} = @"Given a set of sequential int inputs representing submarine depth, return a count of how many of the measurements are greater than the previous one, e.g.:
+199 (N/A - no previous measurement)
+200 (increased)
+208 (increased)
+210 (increased)
+200 (decreased)
+
+Results in 3.";
+        
+        protected override string Run()
+        {            
+            string puzzleInput = "199 200 208 210 200 207 240 269 260 263";
+        
+            return puzzleInput.Split(" ").Length.ToString();
+        }
+    }
+}
+
 /*
 Link to Puzzle: https://adventofcode.com/2021/day/1
 
@@ -2033,36 +2058,5 @@ My puzzle input: (https://adventofcode.com/2021/day/1/input)
 3596
 */
 #endregion
-
-using System;
-using ChallengeRunner;
-
-namespace Day1
-{
-    public class Day1 : IChallenge
-    {
-        public string ChallengeDescription { get;} = @"Given a set of sequential int inputs representing submarine depth, return a count of how many of the measurements are greater than the previous one, e.g.:
-199 (N/A - no previous measurement)
-200 (increased)
-208 (increased)
-210 (increased)
-200 (decreased)
-
-Results in 3.";
-        
-        private string _answer = null;
-        public string Answer
-        {
-            get { return _answer ?? Run(out _answer);}
-        }
-        private string Run(out string answer)
-        {            
-            string puzzleInput = "199 200 208 210 200 207 240 269 260 263";
-        
-            answer = puzzleInput;
-            return answer;
-        }
-    }
-}
 
 
